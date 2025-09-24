@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chinnu101251 — Platform</title>
+  <meta name="description" content="Chinnu101251 — modern, responsive platform starter site." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <!-- Google Font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* dark */
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#06b6d4;
+      --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+      color-scheme: light;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background:linear-gradient(180deg,#071023 0%, #081226 60%);
+      color:#e6eef6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+
+    /* NAV */
+    header{position:sticky;top:12px;z-index:40}
+    .nav{display:flex;gap:18px;align-items:center;justify-content:space-between;background:transparent;padding:10px;border-radius:12px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .logo span{font-size:18px}
+    nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    nav a:hover{color:#fff}
+    .cta{background:linear-gradient(90deg,var(--accent),#7c3aed);padding:10px 14px;border-radius:10px;color:#04202a;font-weight:700;text-decoration:none}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:40px 0}
+    .hero-card{background:var(--glass);padding:26px;border-radius:14px;box-shadow:0 6px 24px rgba(2,6,23,0.6);backdrop-filter: blur(6px)}
+    h1{font-size:32px;margin:0 0 8px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .actions{display:flex;gap:12px}
+    .btn{padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit;text-decoration:none;font-weight:700}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#7c3aed);color:#001418}
+
+    /* FEATURES */
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .feature{background:var(--card);padding:16px;border-radius:12px}
+    .feature h3{margin:0 0 8px}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* PRICING (simple) */
+    .pricing{display:flex;gap:16px;margin:28px 0}
+    .price-card{flex:1;background:linear-gradient(180deg,#071426, #081224);padding:22px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .price{font-size:28px;font-weight:800;margin:6px 0}
+
+    /* CONTACT */
+    form{display:grid;gap:12px}
+    input,textarea{background:#03060a;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:#e6eef6}
+    textarea{resize:vertical;min-height:110px}
+    .footer{margin-top:28px;padding:22px 12px;color:var(--muted);font-size:14px}
+
+    /* small screens */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .grid3{grid-template-columns:1fr 1fr}
+      nav ul{display:none}
+    }
+    @media (max-width:540px){
+      .grid3{grid-template-columns:1fr}
+      .logo{width:40px;height:40px}
+      h1{font-size:26px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="nav">
+        <div class="brand">
+          <div class="logo"><span>C1</span></div>
+          <div>
+            <div style="font-weight:700">Chinnu101251</div>
+            <div style="font-size:12px;color:var(--muted)">Platform • Starter Site</div>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div style="display:flex;gap:10px;align-items:center">
+          <a class="btn" href="#login">Login</a>
+          <a class="cta" href="#signup">Get Started</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-card">
+          <h1>Build your online platform — fast.</h1>
+          <p class="lead">A clean, responsive starter site for chinnu101251.com. Use this as a landing page for your app, portfolio, course, or small business.</p>
+          <div class="actions">
+            <a class="btn primary" href="#signup">Create Account</a>
+            <a class="btn" href="#features">See Features</a>
+          </div>
+
+          <div class="grid3" id="features" style="margin-top:18px">
+            <div class="feature">
+              <h3>Fast to Launch</h3>
+              <div class="muted">Single-file starter, deploy anywhere: Netlify, Vercel, GitHub Pages.</div>
+            </div>
+            <div class="feature">
+              <h3>Responsive</h3>
+              <div class="muted">Looks great on mobile, tablet and desktop without extra setup.</div>
+            </div>
+            <div class="feature">
+              <h3>Customizable</h3>
+              <div class="muted">Swap colours, fonts, or add a backend easily.</div>
+            </div>
+          </div>
+        </div>
+
+        <aside style="padding:12px">
+          <div style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;">
+            <h3 style="margin:0 0 6px">Why choose us?</h3>
+            <p class="muted" style="margin:0 0 12px">Simple pricing, reliable uptime, and friendly support. Perfect for small teams and creators.</p>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;gap:10px;align-items:center"><strong>Uptime</strong><span class="muted">99.9%</span></div>
+              <div style="display:flex;gap:10px;align-items:center"><strong>Support</strong><span class="muted">Email & Chat</span></div>
+              <div style="display:flex;gap:10px;align-items:center"><strong>Integrations</strong><span class="muted">Stripe, Google OAuth</span></div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="pricing">
+        <h2 style="margin-top:18px">Pricing</h2>
+        <div class="pricing">
+          <div class="price-card">
+            <div style="font-weight:700">Starter</div>
+            <div class="price">FREE</div>
+            <p class="muted">Basic features, ideal for testing and personal sites.</p>
+            <ul class="muted">
+              <li>Up to 1 project</li>
+              <li>Community support</li>
+            </ul>
+            <a class="btn" href="#signup">Select</a>
+          </div>
+          <div class="price-card">
+            <div style="font-weight:700">Pro</div>
+            <div class="price">₹499 / month</div>
+            <p class="muted">Best for makers and small teams.</p>
+            <ul class="muted">
+              <li>Unlimited projects</li>
+              <li>Email support</li>
+              <li>Custom domain</li>
+            </ul>
+            <a class="btn primary" href="#signup">Select</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <div style="display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start">
+          <div class="hero-card">
+            <form onsubmit="submitForm(event)">
+              <label class="muted">Name <input required type="text" id="name" placeholder="Your name"></label>
+              <label class="muted">Email <input required type="email" id="email" placeholder="you@domain.com"></label>
+              <label class="muted">Message <textarea id="message" placeholder="How can we help?"></textarea></label>
+              <div style="display:flex;gap:10px;margin-top:6px">
+                <button class="btn primary" type="submit">Send Message</button>
+                <button class="btn" type="button" onclick="fillDemo()">Fill Demo</button>
+              </div>
+              <div id="formResult" style="margin-top:10px;color:var(--muted)"></div>
+            </form>
+          </div>
+
+          <div class="hero-card">
+            <h3 style="margin-top:0">Contact Info</h3>
+            <p class="muted">Email: hello@chinnu101251.com</p>
+            <p class="muted">Phone: +91 90000 00000</p>
+            <p class="muted">Address: Your city, India</p>
+            <div style="height:12px"></div>
+            <h4 style="margin:0 0 6px">Follow</h4>
+            <div style="display:flex;gap:8px">
+              <a class="btn" href="#">Twitter</a>
+              <a class="btn" href="#">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        © <span id="year"></span> Chinnu101251 — Built with ❤️. • <a href="#" style="color:var(--muted);text-decoration:underline">Privacy</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // small interactive helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function submitForm(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const result = document.getElementById('formResult');
+      if(!name || !email || !message){ result.textContent = 'Please complete the form.'; return; }
+      // NOTE: This is a front-end demo. Replace with your own API endpoint to actually send.
+      result.style.color = 'lightgreen';
+      result.textContent = 'Thanks, ' + name + '! Your message was received (demo).';
+      // Clear after 2.5s
+      setTimeout(()=>{ result.textContent=''; document.querySelector('form').reset(); }, 2500);
+    }
+    function fillDemo(){ document.getElementById('name').value='Meghana'; document.getElementById('email').value='meghana@example.com'; document.getElementById('message').value='Hello! I am testing the site.' }
+  </script>
+</body>
+</html>
